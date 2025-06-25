@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <ImageBackground
       source={require('../image/ImagemHome.jpg')}
-      style={style.container}
+      style={style.containerHome}
       resizeMode="cover"
     >
 
@@ -17,13 +17,13 @@ export default function Home() {
         <Text style={{
           fontSize: 28,
           fontWeight: 'bold',
-          marginBottom: 10,
-          alignSelf: 'center',
-          color: 'black'
+          marginTop: 100,
+          alignItems: 'center',
+          color: 'white'
         }}>Bem-Vindo!</Text>
       </View>
-      <View>
-        <AntDesign name="logout" size={50} color="black" /></View>
+      {/* <View>
+        <AntDesign name="logout" size={25} color="white" /></View> */}
     </ImageBackground>
   );
 }

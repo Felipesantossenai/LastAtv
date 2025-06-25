@@ -20,34 +20,42 @@ export default function Login({ navigation }) {
   };
 
   return (
-    <ImageBackground style={style.container_00}
+    <ImageBackground style={style.containerLogin_00}
       source={require('../image/ImagemLogin.jpg')}
       resizeMode="cover"
     >
-      <View style={style.container_01}>
-        <AntDesign name="login" size={30} color="black" />
-        <Text style={style.title}>Login</Text>
+      <View style={style.containerLogin_01}>
+        <View style={style.viewIcon}>
+          <AntDesign name="login" size={25} color="white" style={style.iconEmail} />
 
-        <TextInput
-          placeholder='Digite seu E-mail'
-          value={email}
-          onChangeText={setEmail}
-          placeholderTextColor={'white'}
-          style={style.input}
-          keyboardType='email-address'
-          autoCapitalize='none'
-        />
+          <TextInput
+            placeholder='Digite seu E-mail'
+            value={email}
+            onChangeText={setEmail}
+            placeholderTextColor={'white'}
+            style={style.input}
+            keyboardType='email-address'
+            autoCapitalize='none'
 
-        <MaterialIcons name="password" size={30} color="black" />
+          />
+        </View>
 
-        <TextInput
-          style={style.input}
-          placeholder="Senha"
-          value={senha}
-          onChangeText={setSenha}
-          placeholderTextColor={'white'}
-          secureTextEntry={true}
-        />
+
+
+        <View style={style.viewIcon}>
+          <MaterialIcons name="password" size={25} color="white" style={style.iconPassword} />
+
+          <TextInput
+            style={style.input}
+            placeholder="Senha"
+            value={senha}
+            onChangeText={setSenha}
+            placeholderTextColor={'white'}
+            secureTextEntry={true}
+          />
+        </View>
+
+
         <View style={style.button_00}>
           <TouchableOpacity style={style.button_01} onPress={login}>
             <Text style={style.buttonText}>Entrar</Text>
